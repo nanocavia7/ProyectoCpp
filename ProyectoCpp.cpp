@@ -8,7 +8,8 @@ using namespace std;
 
 class Cliente{ 							//Creamos la clase Cliente
 	private:							//Determinamos los atributos privados de la clase
-		float total, ingr, extr;		
+		float total = 100;
+		float ingr, extr;		
 		
 	public: 							//Determinamos los metodos (publicos de la clase)
 		void ingreso();
@@ -62,7 +63,7 @@ void Cliente::ingreso(){
 		exit(1);
 	}
 
-	cout << "¿Cuantos euros quiere ingresar? // ** para cerrar tu libreta.";		//solicitamos la cantidad a ingresar
+	cout << "Â¿Cuantos euros quiere ingresar? // ** para cerrar tu libreta.";		//solicitamos la cantidad a ingresar
 	cin >>  ingr;																	//dicha cantidad se guarda en la variable ingr
 	
 	do{																				//hasta que se escriba **, se escribe en la libreta el ingreso
@@ -103,7 +104,7 @@ void Cliente::extraer(){
 		exit(1);
 	}
 
-	cout << "¿Cuantos euros quiere extraer? // ** tras el capital a extraer. ";		//solicitamos la cantidad a extraer
+	cout << "Â¿Cuantos euros quiere extraer? // ** tras el capital a extraer. ";		//solicitamos la cantidad a extraer
 	cin >>  extr;																	//dicha cantidad se guarda en la variable extr
 	
 	if(total < extr){															//si extr es mayor que el capital total, no se realiza la extraccion
